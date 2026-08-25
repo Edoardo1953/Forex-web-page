@@ -179,6 +179,11 @@
                 <p class="text-xl text-gray-600 leading-relaxed mb-6" data-i18n="sec1_desc">
                     Avere i dati aggiornati è fondamentale. L'interfaccia di FOREXcross è progettata per essere immediata: apri l'app e hai subito sott'occhio tutti i principali "cross" valutari senza dover navigare tra mille menu.
                 </p>
+                <div class="mb-8">
+                    <button onclick="document.getElementById('calcModal').classList.remove('hidden'); document.getElementById('calcModal').classList.add('flex')" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-colors border border-blue-200 shadow-sm">
+                        <i class="fa-solid fa-calculator mr-2"></i> <span data-i18n="btn_calc">Scopri la calcolatrice</span> <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
                 <ul class="space-y-3 text-gray-600 text-lg">
                     <li><i class="fa-solid fa-check text-green-500 mr-2"></i> <span data-i18n="sec1_b1">Aggiornamenti fulminei dei tassi di cambio</span></li>
                     <li><i class="fa-solid fa-check text-green-500 mr-2"></i> <strong data-i18n="sec1_b2_bold">Ricerca valute:</strong> <span data-i18n="sec1_b2">aggiungi a piacimento numerosissime divise di tutto il mondo</span></li>
@@ -297,6 +302,24 @@
         </div>
 
     </section>
+    
+    <!-- Modal Calcolatrice -->
+    <div id="calcModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl relative">
+            <button onclick="document.getElementById('calcModal').classList.remove('flex'); document.getElementById('calcModal').classList.add('hidden')" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 w-8 h-8 rounded-full flex items-center justify-center transition-colors z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="bg-gray-100 p-4 flex justify-center">
+                <img src="calculator.png" alt="Calcolatrice FOREXcross" class="max-h-[60vh] object-contain rounded-xl shadow-sm border border-gray-200">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="calc_modal_title">Calcolatore Integrato</h3>
+                <p class="text-gray-600 text-sm leading-relaxed" data-i18n="calc_modal_desc">
+                    Durante le vostre vacanze potrete utilizzare l'app per calcolare un importo in divisa locale e sapere rapidamente il controvalore nella vostra divisa (es. EUR).
+                </p>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
         <div class="max-w-6xl mx-auto px-4">
@@ -325,6 +348,9 @@
                 sec1_b2_bold: "Ricerca valute:",
                 sec1_b2: "aggiungi a piacimento numerosissime divise di tutto il mondo",
                 sec1_b3: "Design pulito e senza distrazioni",
+                btn_calc: "Scopri la calcolatrice",
+                calc_modal_title: "Calcolatore Integrato",
+                calc_modal_desc: "Durante le vostre vacanze potrete utilizzare l'app per calcolare un importo in divisa locale e sapere rapidamente il controvalore nella vostra divisa (es. EUR).",
                 tip_rates: "Interagisci con i tassi in tempo reale qui sopra",
                 sec2_title: "Zero installazioni, 100% Nativa",
                 sec2_desc: "FOREXcross utilizza la tecnologia PWA. Non devi passare per nessun App Store. Basta salvarla sulla schermata Home e funzionerà esattamente come un'app nativa, con tanto di logo e avvio a tutto schermo.",
@@ -368,6 +394,9 @@
                 sec1_b2_bold: "Currency search:",
                 sec1_b2: "add numerous worldwide currencies at will",
                 sec1_b3: "Clean and distraction-free design",
+                btn_calc: "Discover the calculator",
+                calc_modal_title: "Integrated Calculator",
+                calc_modal_desc: "During your holidays you can use the app to calculate an amount in local currency and quickly know the equivalent value in your currency (e.g. EUR).",
                 tip_rates: "Interact with real-time rates above",
                 sec2_title: "Zero Installations, 100% Native",
                 sec2_desc: "FOREXcross uses PWA technology. You don't have to go through any App Store. Just save it to your Home screen and it works exactly like a native app, complete with an icon and full-screen launch.",
@@ -411,6 +440,9 @@
                 sec1_b2_bold: "Recherche de devises :",
                 sec1_b2: "ajoutez de nombreuses devises du monde entier à volonté",
                 sec1_b3: "Design épuré et sans distraction",
+                btn_calc: "Découvrez la calculatrice",
+                calc_modal_title: "Calculatrice Intégrée",
+                calc_modal_desc: "Pendant vos vacances, vous pouvez utiliser l'application pour calculer un montant en devise locale et connaître rapidement la contre-valeur dans votre devise (ex. EUR).",
                 tip_rates: "Interagissez avec les taux en temps réel ci-dessus",
                 sec2_title: "Zéro Installation, 100% Native",
                 sec2_desc: "FOREXcross utilise la technologie PWA. Plus besoin de passer par un App Store. Ajoutez-la à votre écran d'accueil et elle fonctionnera comme une appli native avec lancement en plein écran.",
